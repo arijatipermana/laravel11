@@ -6,7 +6,7 @@
     <title>List Product</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
-<body style="background: darkslategray;">
+<body style="background: #444a54 !important;">
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
