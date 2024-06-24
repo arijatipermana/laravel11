@@ -26,7 +26,7 @@ class ProductController extends Controller
     }
 
     // create
-    public function create() : Vies {
+    public function create() : View {
         return view('products.create');
     }
     
