@@ -31,7 +31,7 @@
                                 @forelse ($products as $product)
                                     <tr>
                                         <td class="text-center">
-                                            <img src="{{ asset('/storage/products/'.$products->image) }}" class="rounded" style="width: 150px;" alt="" srcset="">
+                                            <img src="{{ asset('/storage/products/'.$product->image) }}" class="rounded" style="width: 150px;">
                                         </td>
                                         <td>{{ $product->title }}</td>
                                         <td>{{ "Rp " . number_format($product->price,2,',','.') }}</td>
