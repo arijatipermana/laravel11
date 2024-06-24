@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function index() : View {
-        $product = Product::latest()->paginate(10);
+        $products = Product::latest()->paginate(10);
 
         return view('products.index', compact('products'));
     }
