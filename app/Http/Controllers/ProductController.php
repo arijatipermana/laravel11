@@ -41,7 +41,7 @@ class ProductController extends Controller
             'stock'         =>  'required|numeric'
         ]);
 
-        //upload image
+        // upload image
         $image = $request->file('image');
         $image->storeAs('public/products', $image->hashName());
 
@@ -54,7 +54,16 @@ class ProductController extends Controller
             'stock'         => $request->stock
         ]);
 
-        //redirect to index
+        // redirect to index
         return redirect()->route('products.index')->with(['success' => 'Data saved successfully!']);
+    }
+
+    // show
+    public function show(string $id) : View {
+        // get product by ID
+        $product = Product::findOrFail($id);
+
+        // render view with product
+        return view('products.show', compact('product'));
     }
 }
