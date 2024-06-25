@@ -14,6 +14,8 @@ use Illuminate\Http\RedirectResponse;
 // import http request
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Storage;
+
 class ProductController extends Controller
 {
     // index
@@ -65,5 +67,14 @@ class ProductController extends Controller
 
         // render view with product
         return view('products.show', compact('product'));
+    }
+
+    // edit
+    public function edit(string $id) : View {
+        // get product by ID
+        $product = Product::findOrFail($id);
+
+        // render view with product
+        return view('products.edit', compact('product'));
     }
 }
