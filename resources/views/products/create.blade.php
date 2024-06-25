@@ -81,8 +81,8 @@
                             </div>
                             
                             <a href="{{ route('products.index') }}" class="btn btn-md btn-danger me-3">Back</a>
-                            <button class="btn btn-md btn-primary me-3">Save</button>
-                            <button class="btn btn-md btn-warning">Reset</button>
+                            <button type="submit" class="btn btn-md btn-primary me-3">Save</button>
+                            <button type="reset" class="btn btn-md btn-warning">Reset</button>
                             
                         </form>
                     </div>
